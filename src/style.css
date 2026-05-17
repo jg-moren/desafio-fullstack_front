@@ -19,7 +19,7 @@ body{
     font-family: 'Courier New', Courier, monospace;
 }
 
-button {
+.text-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -38,17 +38,58 @@ button {
   transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
-button:hover {
+.text-button:hover {
   background-color: #0056b3; 
 }
 
-button:active {
+.text-button:active {
   transform: scale(0.98); 
 }
 
-button:focus-visible {
+.text-button:focus-visible {
   outline: none;
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
 }
 
+.icon-button {
+  /* Alinhamento centralizado do ícone */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  /* Tamanho fixo para garantir um quadrado perfeito */
+  width: 36px;
+  height: 36px;
+  
+  /* Remove estilos padrão do botão */
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  border-radius: 50%; /* 50% deixa o botão perfeitamente circular. Use 6px para quadrado arredondado */
+  
+  font-size: 18px; /* Controla o tamanho do emoji/ícone interno */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Estado: Hover (Passar o mouse) - Efeito sutil de fundo */
+.icon-button:hover {
+  background-color: rgba(220, 53, 69, 0.1); /* Fundo vermelho bem clarinho */
+  border-color: #dc3545;                     /* Borda vermelha */
+}
+
+/* Estado: Active (Clique) */
+.icon-button:active {
+  transform: scale(0.92);
+}
+
+/* Variação opcional: Se você quiser o botão já preenchido com cor nativamente */
+.icon-button.filled {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.icon-button.filled:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white; /* Se o ícone for uma fonte/SVG */
+}
