@@ -1,0 +1,54 @@
+
+.table-container{
+
+    width: 100%;
+    overflow-x: scroll; 
+    border-radius: 8px;
+}
+
+.table-custom { 
+    min-width: 1000px;
+    width: 90%;
+    border-radius: 6px;
+    background-color: #fff;
+
+    border: 1px solid #ccc;
+    margin: auto;
+}
+
+.loading{
+    width: 100px;
+    margin: auto;
+}
+
+.table-lines{
+    height: 50px;
+    padding: 16px 16px 16px 16px;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    
+    border: 0px;
+    border-bottom:1px solid #ccc;
+    
+}
+
+.table-items{
+    text-align: center;
+}
+
+.table-icons{
+
+    width: 90px;
+    text-align: end;
+}
+
+.table-ativo{
+    border-radius: 100em;
+    background-color: #9f9;
+}
+
+.table-inativo{
+    border-radius: 100em;
+    background-color: #ccc;
+}

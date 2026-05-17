@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useVolunteers } from '../../hooks/useVolunteers';
-import { Cargos, Disponibilidade } from '../../api/volunteers';
-import { Select } from '../../components/Select';
+import { Form } from '../../components/Form'
 
 export function VolunteerCreate() {
   const { addVolunteer } = useVolunteers();
   const navigate = useNavigate();
-  const [nome, setName] = useState('');
+  const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
   const [cargo, setCargo] = useState('');
@@ -20,18 +19,20 @@ export function VolunteerCreate() {
   };
 
   return (
-    <div>
-
-
-      <h2>Cadastrar Voluntário</h2>
-      <input placeholder="Nome" value={nome} onChange={(e) => setName(e.target.value)} required />
-      <input placeholder="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <input placeholder="Telefone" value={telefone} onChange={(e) => setTelefone(e.target.value)} required />
-      <input placeholder="Disponibilidade" value={disponibilidade} onChange={(e) => setDisponibilidade(e.target.value)} required />
-      <Select texto = "Selecione um Cargo" valor = {cargo} setValor = {setCargo} opcoes={Cargos}></Select>
-      <Select texto = "Selecione uma Disponibilidade" valor = {disponibilidade} setValor = {setDisponibilidade} opcoes={Disponibilidade}></Select>
-      <button onClick={submit} >Salvar</button>
-      <button onClick={() => navigate('/')}>Cancelar</button>
-    </div>
+    <Form 
+      titulo='Novo Voluntario'
+      legenda = 'Preencha os dados para cadastrar um novo voluntario'
+      nome = {nome}
+      email = {email}
+      telefone = {telefone}
+      cargo = {cargo}
+      disponibilidade = {disponibilidade}
+      setNome = {setNome}
+      setEmail = {setEmail}
+      setTelefone = {setTelefone}
+      setCargo = {setCargo}
+      setDisponibilidade = {setDisponibilidade}
+      submit= {submit}
+    />
   );
 }

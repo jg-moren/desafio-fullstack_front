@@ -6,7 +6,6 @@ import { VolunteerEdit } from './pages/VolunteerEdit';
 export default function App() {
   return (
     <BrowserRouter>
-      <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
         <Routes>
           <Route path="/volunteers" element={<VolunteersList />} />
           <Route path="/volunteers/create" element={<VolunteerCreate />} />
@@ -16,7 +15,6 @@ export default function App() {
           <Route path="/" element={<Navigate to="/volunteers" replace />} />
           <Route path="*" element={<h2>404 - Não Encontrado</h2>} />
         </Routes>
-      </div>
     </BrowserRouter>
   );
 }

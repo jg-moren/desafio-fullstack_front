@@ -16,10 +16,40 @@
     background-color: #FFF;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 16px;
+    
 }
 
 @media (max-width: 800px) {
   .filter {
     display: block;
   }
+  .titulo{
+    display: block;
+  }
+}
+
+.cancelar-button {
+  width: 100%;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  
+  color: #000;
+  background-color: #ddd; 
+  border: none;
+  border-radius: 6px;
+  
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.cancelar-button:hover {
+  background-color: #aaa; 
 }
